@@ -1,0 +1,194 @@
+.left-side {
+    background: $color-left-side;
+    width: 40%;
+    padding: 10px;
+
+    .controls {
+        padding: 10px;
+        display: flex;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    form {
+        display: flex;
+
+        input {
+            width: 100%;
+            border: none;
+            // border-top: 1px solid opacify($color-input, 0.05);
+            // border-left: 1px solid opacify($color-input, 0.05);
+            
+            background: $color-input url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 8px center;
+            background-size: 13px 13px;
+            border-radius: 5px;
+            padding: 5px 5px 5px 27px;
+
+            &::placeholder {
+                font-size: 13px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    span.icon {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        border-radius: 50%;
+        padding: 3px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin: 20px 0;
+    }
+
+    .categories {
+        color: $color-font2;
+
+        .category {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            height: 60px; 
+            padding: 6px;
+
+            background: $color-input;
+            border-radius: 5px;
+            transition: .5s;
+
+            &:hover {
+                background: opacify($color-input, 0.08);
+                cursor: pointer;
+            }
+            
+            .top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                font-size: 18px;
+                font-weight: 600;
+            }
+            p.when {
+                font-size: 14px;
+            }
+        }
+
+
+        .today .icon {
+            background: $color-today;
+        }
+        .scheduled .icon {
+            background: $color-scheduled;
+        }
+        .all .icon {
+            background: $color-all;
+        }
+        .flagged .icon {
+            background: $color-flagged;
+        }
+    }
+    
+
+    .my-lists {
+        height: 54%;
+
+        .heading {
+            margin-left: 5px;
+            margin-bottom: 3px;
+
+            color: $color-font3;
+        }
+        
+        .lists {
+            overflow: auto;
+            height: 100%;
+        }
+
+        .list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            width: 100%;
+            padding: 5px 10px 5px 7px;;
+            border-radius: 5px;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.09);
+                cursor: pointer;
+                
+            }
+                            
+            .list-left {
+                display: flex;
+                align-items: center;
+                
+                p {
+                    white-space: nowrap;
+                }
+            }
+
+            span.count {
+                color: transparentize($color-fontbase, 0.36)
+            }
+
+            p {
+                margin-left: 8px;
+            }
+        }
+
+        .medical span.icon{
+            background: $color-medical;
+        }
+        
+        .family span.icon{
+            background: $color-family;
+        }
+        
+        .social span.icon{
+            background: $color-social;
+        }
+        
+        .work span.icon{
+            background: $color-work;
+        }
+        
+        .shopping span.icon{
+            background: $color-shopping;
+        }
+    }
+
+    .add-list {
+        display: inline-block;
+
+        span {
+            font-size: 12px;
+            color: $color-font2;
+            
+            border: 1px solid $color-font2;
+            border-radius: 50%;
+            padding: 0 3px;
+        }
+        p {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: -0.7px;
+            font-weight: 600;
+            margin-left: 6px;
+        }
+        &:hover {
+            cursor: pointer;
+            color: transparentize( $color-font2, 0.05 )
+        }
+    }
+}

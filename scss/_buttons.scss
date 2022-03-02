@@ -10,52 +10,116 @@
 //}
 
 
-@each $button, $color in $button-colors {
-    .btn-#{$button} { 
-        @extend %button;
-        background: $color;
+// @each $button, $color in $button-colors {
+//     .btn-#{$button} { 
+//         @extend %button;
+//         background: $color;
         
-        &:hover, &:focus {
-            background: transparentize( $color, 0.25 );
-        }
+//         &:hover, &:focus {
+//             background: transparentize( $color, 0.25 );
+//         }
         
-        @if( $button == 'white') {
-            padding: 0.8em 1.5em;
-            color: black;
-        }
-        @else {   
-        text-shadow: em(1) em(1) 0 darken( $color, 15% );
-        }
-        }
+//         @if( $button == 'white') {
+//             padding: 0.8em 1.5em;
+//             color: black;
+//         }
+//         @else {   
+//         text-shadow: em(1) em(1) 0 darken( $color, 15% );
+//         }
+//         }
+// }
+
+// .buttons {
+//      .btns {
+//         max-width: em(696);
+//         margin: 0 auto;
+      
+//         a {
+//             width: 49%;
+//             margin: 0.5% 0.25%;
+//         }
+//      }
+// }
+
+// $icons: (   "eye":      "\f112",
+//             "start":    "\f12e", 
+//             "stop":     "\f12f");
+
+// @each $name, $glyph in $icons {
+//   .icon-#{$name}:before {
+//     display: inline-block;
+//     font-family: "Icon Font";
+//     content: $glyph;
+//   }
+// }
+
+
+button {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: none;
+	
+	
+	&.quit {
+		background: $btn-quit;
+		border: 1px solid darken($btn-quit, 10%);
+		
+		&:hover,
+		&.active {
+			background: darken($btn-quit, 10%);
+		}
+	}
+	
+	&.minimize {
+		background: $btn-minimize;
+		border: 1px solid darken($btn-minimize, 10%);
+
+		&:hover,
+		&.active {
+			background: darken($btn-minimize, 10%);
+		}
+	}
+	&.maximize {
+		background: $btn-maximize;
+		border: 1px solid darken($btn-maximize, 10%);
+
+		&:hover,
+		&.active {
+			background: darken($btn-maximize, 10%);
+		}
+	}
 }
 
-.buttons {
-     .btns {
-        max-width: em(696);
-        margin: 0 auto;
-        
-        a {
-            width: 49%;
-            margin: 0.5% 0.25%;
-        }
-        
-    }
-    
-    
+.svg-icon {
+	width: 1.1em;
+	height: 1.1em;
 }
-
-$icons: (   "eye":      "\f112",
-            "start":    "\f12e", 
-            "stop":     "\f12f");
-
-@each $name, $glyph in $icons {
-  .icon-#{$name}:before {
-    display: inline-block;
-    font-family: "Icon Font";
-    content: $glyph;
-  }
-}
-
-
-
   
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+	fill: #ffffff;
+  }
+  
+  .svg-icon circle {
+	stroke: #4691f6;
+	stroke-width: 1;
+  }
+
+  .task {
+	svg {
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:hover circle {
+			fill: $color-flagged;
+		}
+	}
+	circle {
+	  stroke: $color-font3;
+	  stroke-width: 1;
+	  fill: none;
+  	}	
+  }
