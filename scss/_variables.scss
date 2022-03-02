@@ -1,34 +1,34 @@
 //------ MAIN COLOR -------------------
-$color-body:    #363842;
-$color-home:    #8FD2D1;
-$color-gallery: #FCBD24;
-$color-blog:    #019DCD;
-$color-contact: #FD685B;
-$color-buttons: #a78c8c;
+$color-body:  linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);;
+$color-left-side: rgba(255, 255, 255, 0.75);
+$color-right-side: rgba(255, 255, 255, 0.9);
+$color-input: rgba(0, 0, 0, 0.09);
 
-$page-colors:   (
-                'home':     $color-home,
-                'gallery':  $color-gallery,
-                'blog':     $color-blog,
-                'contact':  $color-contact,
-                'buttons':  $color-buttons
-    );
+
 
 
 //------------BUTTONS------------------
-$btn-red: $color-contact;
-$btn-green: #39ae90;
-$btn-blue: #6c8ace;
-$btn-white: white;
-$btn-yellow: #fecd5e;
+$btn-quit: rgb(233, 73, 73);
+$btn-minimize: rgb(248, 194, 94);
+$btn-maximize: rgb(7, 206, 7);
+
 
 $button-colors:   ( 
-                'red':      $color-contact,
-                'green':    #39ae90,
-                'blue':     #6c8ace,
                 'white':    #fff,
                 'yellow':   #fecd5e
     ); 
+
+//------------LIST COLORS--------------
+$color-family: rgb(69, 139, 204);
+$color-shopping: rgb(207, 35, 35);
+$color-work: rgb(238, 214, 80);
+$color-social: rgb(100, 216, 84);
+$color-medical: rgb(233, 147, 77);
+
+$color-today: rgb(69, 139, 204);
+$color-scheduled: rgb(207, 35, 35);
+$color-all: rgb(83, 83, 83);
+$color-flagged: rgb(233, 147, 77);
 
 
 
@@ -40,10 +40,11 @@ $button-colors:   (
 
 //----- FONT -------------------------
 
-
-$color-text:    #fff;
-$color-nav:     #777;
-$color-footer:  #8C95AD;
+$color-fontbase: black;
+$color-font1:    #fff;
+$color-font2:    rgb(109, 109, 109);
+$color-font3:    #8b8a8a;
+$color-font3:    #b8b8b8;
 
 $font-family-sans: Montserrat, sans-serif;
 $font-family-serif: 'Big Caslon', Georgia, serif;

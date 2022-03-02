@@ -1,3 +1,7 @@
+@import 'variables';
+
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -23,6 +27,12 @@ body {
 	padding: 0;
 	font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
 	color: #323232;
+	min-height: 100vh;
+	background: $color-body;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	
 }
 
@@ -34,3 +44,405 @@ body {
 	max-width: 1150px;
 	min-width: 320px;
 }
+
+.app {
+	height: 600px;
+	width: 750px;
+	
+	display: inline-block;
+	border-radius: 0.5rem;
+	display: flex;
+	overflow: hidden;
+
+	.left-side {
+		background: $color-left-side;
+		width: 40%;
+		
+		padding: 10px;
+
+		.controls {
+			padding: 10px;
+			display: flex;
+			gap: 8px;
+			margin-bottom: 10px;
+			
+		}
+
+		form {
+			display: flex;
+
+			input {
+				width: 100%;
+				border: none;
+				// border-top: 1px solid opacify($color-input, 0.05);
+				// border-left: 1px solid opacify($color-input, 0.05);
+				
+				background: $color-input url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 8px center;
+				background-size: 13px 13px;
+
+				
+				border-radius: 5px;
+				padding: 5px 5px 5px 27px;
+
+				&::placeholder {
+					font-size: 13px;
+				}
+
+				&:focus {
+					outline: none;
+					
+				}
+
+				
+				
+			}
+
+			
+		}
+		span.icon {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			
+			
+			border-radius: 50%;
+			padding: 3px;
+		}
+
+		nav {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 8px;
+			margin: 20px 0;
+		}
+
+		.categories {
+			color: $color-font2;
+
+			.category {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				
+				height: 60px; 
+				padding: 6px;
+
+				background: $color-input;
+				border-radius: 5px;
+				transition: .5s;
+
+				&:hover {
+					background: opacify($color-input, 0.08);
+					cursor: pointer;
+				}
+				
+				.top {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					font-size: 18px;
+					font-weight: 600;
+				}
+				p.when {
+					font-size: 14px;
+				}
+			}
+
+
+			.today .icon {
+				background: $color-today;
+			}
+			.scheduled .icon {
+				background: $color-scheduled;
+			}
+			.all .icon {
+				background: $color-all;
+			}
+			.flagged .icon {
+				background: $color-flagged;
+			}
+		}
+		
+
+		.my-lists {
+			height: 54%;
+
+			.heading {
+				margin-left: 5px;
+				margin-bottom: 3px;
+
+				color: $color-font3;
+			}
+			
+			.lists {
+				overflow: auto;
+				height: 100%;
+
+				
+			}
+
+			.list {
+				width: 100%;
+				padding: 5px 10px 5px 7px;;
+
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border-radius: 5px;
+
+				&:hover {
+					background: rgba(0, 0, 0, 0.09);
+					cursor: pointer;
+					
+				}
+								
+				.list-left {
+					display: flex;
+					align-items: center;
+					
+					p {
+						white-space: nowrap;
+					}
+				}
+
+				
+
+				
+
+				span.count {
+					color: transparentize($color-fontbase, 0.36)
+				}
+
+				p {
+					margin-left: 8px;
+				}
+			}
+
+			.medical span.icon{
+				background: $color-medical;
+			}
+			
+			.family span.icon{
+				background: $color-family;
+			}
+			
+			.social span.icon{
+				background: $color-social;
+			}
+			
+			.work span.icon{
+				background: $color-work;
+			}
+			
+			.shopping span.icon{
+				background: $color-shopping;
+			}
+		}
+
+		.add-list {
+			display: inline-block;
+			
+
+			span {
+				font-size: 12px;
+				color: $color-font2;
+				
+				border: 1px solid $color-font2;
+				border-radius: 50%;
+				padding: 0 3px;
+			}
+			p {
+				display: inline-block;
+				font-size: 12px;
+				letter-spacing: -0.7px;
+				font-weight: 600;
+				margin-left: 6px;
+			}
+			&:hover {
+				cursor: pointer;
+				color: transparentize( $color-font2, 0.05 )
+				
+				
+			}
+		}
+	}
+
+	.right-side {
+		background: $color-right-side;
+		width: 60%;
+		padding: 10px;
+
+		.controls {
+			display: flex;
+			justify-content: flex-end;
+			padding: 7px 10px;
+
+			color: $color-font3;
+
+			a.add-task {
+				font-size: 24px;
+				padding: 0 2px;
+				line-height: 0.8;
+				border-radius: 5px;
+
+				&:hover {
+					background: transparentize($color-font3, 0.8);
+					cursor: pointer;
+				}
+			}
+		}
+
+		.todos {
+			padding: 8px;
+
+			.header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				color: $color-social;
+
+				h1 {
+					margin: 10px 0 15px;
+				}
+				
+				span.count {
+					font-size: 32px;
+					// font-weight: 500;
+				};
+			}
+
+			.completed {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 1px solid lighten($color-font3, 10%);
+				padding-bottom: 2px;
+				margin-right: -13px;
+				;
+				font-size: 14px;
+
+				a {
+					color: $color-social;
+					margin-right: 9px;
+					padding: 5px;
+					border-radius: 3px;
+
+					&:hover {
+						background: transparentize($color-font3, 0.8);
+						cursor: pointer;
+					}
+				}
+			}
+
+			.task {
+				display: flex;
+				margin-top: 5px;
+				
+				.task-detail {
+					padding: 3px 0;
+					border-bottom: 1px solid lighten($color-font3, 10%);
+					margin-left: 10px;
+					margin-right: -13px;
+					
+					flex-grow: 1;
+
+					h4 {
+						font-size: 14px;
+					}
+					p {
+						font-size: 12px;
+						color: $color-font2;
+						margin-top: 3px;
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+ 
+button {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: none;
+	
+	
+	&.quit {
+		background: $btn-quit;
+		border: 1px solid darken($btn-quit, 10%);
+		
+		&:hover,
+		&.active {
+			background: darken($btn-quit, 10%);
+
+		}
+	}
+	
+	&.minimize {
+		background: $btn-minimize;
+		border: 1px solid darken($btn-minimize, 10%);
+
+		&:hover,
+		&.active {
+			background: darken($btn-minimize, 10%);
+
+		}
+	}
+	&.maximize {
+		background: $btn-maximize;
+		border: 1px solid darken($btn-maximize, 10%);
+
+		&:hover,
+		&.active {
+			background: darken($btn-maximize, 10%);
+
+		}
+	}
+
+	
+
+}
+
+
+
+.svg-icon {
+	width: 1.1em;
+	height: 1.1em;
+	
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+	fill: #ffffff;
+  }
+  
+  .svg-icon circle {
+	stroke: #4691f6;
+	stroke-width: 1;
+  }
+
+  .task {
+	svg {
+		&:hover {
+			cursor: pointer;
+			
+		}
+
+		&:hover circle {
+			fill: $color-flagged;
+		}
+	}
+	circle {
+	  stroke: $color-font3;
+	  stroke-width: 1;
+
+	  fill: none;
+	  
+	  
+  	}	
+  }
+
+  

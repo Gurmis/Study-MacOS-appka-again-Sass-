@@ -23,6 +23,11 @@ body {
   padding: 0;
   font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
   color: #323232;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -32,6 +37,299 @@ body {
   padding-right: 15px;
   max-width: 1150px;
   min-width: 320px;
+}
+
+.app {
+  height: 600px;
+  width: 750px;
+  display: inline-block;
+  border-radius: 0.5rem;
+  display: flex;
+  overflow: hidden;
+}
+.app .left-side {
+  background: rgba(255, 255, 255, 0.75);
+  width: 40%;
+  padding: 10px;
+}
+.app .left-side .controls {
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.app .left-side form {
+  display: flex;
+}
+.app .left-side form input {
+  width: 100%;
+  border: none;
+  background: rgba(0, 0, 0, 0.09) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 8px center;
+  background-size: 13px 13px;
+  border-radius: 5px;
+  padding: 5px 5px 5px 27px;
+}
+.app .left-side form input::placeholder {
+  font-size: 13px;
+}
+.app .left-side form input:focus {
+  outline: none;
+}
+.app .left-side span.icon {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+  padding: 3px;
+}
+.app .left-side nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 20px 0;
+}
+.app .left-side .categories {
+  color: #6d6d6d;
+}
+.app .left-side .categories .category {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  transition: .5s;
+}
+.app .left-side .categories .category:hover {
+  background: rgba(0, 0, 0, 0.17);
+  cursor: pointer;
+}
+.app .left-side .categories .category .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.app .left-side .categories .category p.when {
+  font-size: 14px;
+}
+.app .left-side .categories .today .icon {
+  background: #458bcc;
+}
+.app .left-side .categories .scheduled .icon {
+  background: #cf2323;
+}
+.app .left-side .categories .all .icon {
+  background: #535353;
+}
+.app .left-side .categories .flagged .icon {
+  background: #e9934d;
+}
+.app .left-side .my-lists {
+  height: 54%;
+}
+.app .left-side .my-lists .heading {
+  margin-left: 5px;
+  margin-bottom: 3px;
+  color: #b8b8b8;
+}
+.app .left-side .my-lists .lists {
+  overflow: auto;
+  height: 100%;
+}
+.app .left-side .my-lists .list {
+  width: 100%;
+  padding: 5px 10px 5px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.app .left-side .my-lists .list:hover {
+  background: rgba(0, 0, 0, 0.09);
+  cursor: pointer;
+}
+.app .left-side .my-lists .list .list-left {
+  display: flex;
+  align-items: center;
+}
+.app .left-side .my-lists .list .list-left p {
+  white-space: nowrap;
+}
+.app .left-side .my-lists .list span.count {
+  color: rgba(0, 0, 0, 0.64);
+}
+.app .left-side .my-lists .list p {
+  margin-left: 8px;
+}
+.app .left-side .my-lists .medical span.icon {
+  background: #e9934d;
+}
+.app .left-side .my-lists .family span.icon {
+  background: #458bcc;
+}
+.app .left-side .my-lists .social span.icon {
+  background: #64d854;
+}
+.app .left-side .my-lists .work span.icon {
+  background: #eed650;
+}
+.app .left-side .my-lists .shopping span.icon {
+  background: #cf2323;
+}
+.app .left-side .add-list {
+  display: inline-block;
+}
+.app .left-side .add-list span {
+  font-size: 12px;
+  color: #6d6d6d;
+  border: 1px solid #6d6d6d;
+  border-radius: 50%;
+  padding: 0 3px;
+}
+.app .left-side .add-list p {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: -0.7px;
+  font-weight: 600;
+  margin-left: 6px;
+}
+.app .left-side .add-list:hover {
+  cursor: pointer;
+  color: rgba(109, 109, 109, 0.95);
+}
+.app .right-side {
+  background: rgba(255, 255, 255, 0.9);
+  width: 60%;
+  padding: 10px;
+}
+.app .right-side .controls {
+  display: flex;
+  justify-content: flex-end;
+  padding: 7px 10px;
+  color: #b8b8b8;
+}
+.app .right-side .controls a.add-task {
+  font-size: 24px;
+  padding: 0 2px;
+  line-height: 0.8;
+  border-radius: 5px;
+}
+.app .right-side .controls a.add-task:hover {
+  background: rgba(184, 184, 184, 0.2);
+  cursor: pointer;
+}
+.app .right-side .todos {
+  padding: 8px;
+}
+.app .right-side .todos .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #64d854;
+}
+.app .right-side .todos .header h1 {
+  margin: 10px 0 15px;
+}
+.app .right-side .todos .header span.count {
+  font-size: 32px;
+}
+.app .right-side .todos .completed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d2d2d2;
+  padding-bottom: 2px;
+  margin-right: -13px;
+  font-size: 14px;
+}
+.app .right-side .todos .completed a {
+  color: #64d854;
+  margin-right: 9px;
+  padding: 5px;
+  border-radius: 3px;
+}
+.app .right-side .todos .completed a:hover {
+  background: rgba(184, 184, 184, 0.2);
+  cursor: pointer;
+}
+.app .right-side .todos .task {
+  display: flex;
+  margin-top: 5px;
+}
+.app .right-side .todos .task .task-detail {
+  padding: 3px 0;
+  border-bottom: 1px solid #d2d2d2;
+  margin-left: 10px;
+  margin-right: -13px;
+  flex-grow: 1;
+}
+.app .right-side .todos .task .task-detail h4 {
+  font-size: 14px;
+}
+.app .right-side .todos .task .task-detail p {
+  font-size: 12px;
+  color: #6d6d6d;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+}
+button.quit {
+  background: #e94949;
+  border: 1px solid #e41c1c;
+}
+button.quit:hover, button.quit.active {
+  background: #e41c1c;
+}
+button.minimize {
+  background: #f8c25e;
+  border: 1px solid #f6af2d;
+}
+button.minimize:hover, button.minimize.active {
+  background: #f6af2d;
+}
+button.maximize {
+  background: #07ce07;
+  border: 1px solid #059d05;
+}
+button.maximize:hover, button.maximize.active {
+  background: #059d05;
+}
+
+.svg-icon {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #ffffff;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
+.task svg:hover {
+  cursor: pointer;
+}
+.task svg:hover circle {
+  fill: #e9934d;
+}
+.task circle {
+  stroke: #b8b8b8;
+  stroke-width: 1;
+  fill: none;
 }
 
 /*# sourceMappingURL=style.css.map */
