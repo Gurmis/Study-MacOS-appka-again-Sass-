@@ -1,13 +1,13 @@
 .left-side {
     background: $color-left-side;
     width: 40%;
-    padding: 10px;
+    padding: rem(10);
 
     .controls {
-        padding: 10px;
+        padding: rem(10);
         display: flex;
-        gap: 8px;
-        margin-bottom: 10px;
+        gap: rem(8);
+        margin-bottom: rem(10);
     }
 
     form {
@@ -19,13 +19,13 @@
             // border-top: 1px solid opacify($color-input, 0.05);
             // border-left: 1px solid opacify($color-input, 0.05);
             
-            background: $color-input url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 8px center;
-            background-size: 13px 13px;
-            border-radius: 5px;
-            padding: 5px 5px 5px 27px;
+            background: $color-input url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat rem(8) center;
+            background-size: rem(13) rem(13);
+            border-radius: rem(5);
+            padding: rem(5) rem(5) rem(5) rem(27);
 
             &::placeholder {
-                font-size: 13px;
+                font-size: rem(13);
             }
 
             &:focus {
@@ -40,14 +40,14 @@
         align-content: center;
 
         border-radius: 50%;
-        padding: 3px;
+        padding: rem(3);
     }
 
     nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        margin: 20px 0;
+        gap: rem(8);
+        margin: rem(20) 0;
     }
 
     .categories {
@@ -58,11 +58,11 @@
             flex-direction: column;
             justify-content: space-between;
             
-            height: 60px; 
-            padding: 6px;
+            height: rem(60); 
+            padding: rem(6);
 
             background: $color-input;
-            border-radius: 5px;
+            border-radius: rem(5);
             transition: .5s;
 
             &:hover {
@@ -75,11 +75,11 @@
                 justify-content: space-between;
                 align-items: center;
 
-                font-size: 18px;
+                font-size: rem(18);
                 font-weight: 600;
             }
             p.when {
-                font-size: 14px;
+                font-size: rem(14);
             }
         }
 
@@ -103,8 +103,8 @@
         height: 54%;
 
         .heading {
-            margin-left: 5px;
-            margin-bottom: 3px;
+            margin-left: rem(5);
+            margin-bottom: rem(3);
 
             color: $color-font3;
         }
@@ -120,8 +120,8 @@
             justify-content: space-between;
             
             width: 100%;
-            padding: 5px 10px 5px 7px;;
-            border-radius: 5px;
+            padding: rem(5) rem(10) rem(5) rem(7);;
+            border-radius: rem(5);
 
             &:hover {
                 background: rgba(0, 0, 0, 0.09);
@@ -143,7 +143,7 @@
             }
 
             p {
-                margin-left: 8px;
+                margin-left: rem(8);
             }
         }
 
@@ -172,19 +172,19 @@
         display: inline-block;
 
         span {
-            font-size: 12px;
+            font-size: rem(12);
             color: $color-font2;
             
-            border: 1px solid $color-font2;
+            border: rem(1) solid $color-font2;
             border-radius: 50%;
-            padding: 0 3px;
+            padding: 0 rem(3);
         }
         p {
             display: inline-block;
-            font-size: 12px;
-            letter-spacing: -0.7px;
+            font-size: rem(12);
+            letter-spacing: rem(-0.7);
             font-weight: 600;
-            margin-left: 6px;
+            margin-left: rem(6);
         }
         &:hover {
             cursor: pointer;

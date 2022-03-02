@@ -41,29 +41,18 @@
 //      }
 // }
 
-// $icons: (   "eye":      "\f112",
-//             "start":    "\f12e", 
-//             "stop":     "\f12f");
-
-// @each $name, $glyph in $icons {
-//   .icon-#{$name}:before {
-//     display: inline-block;
-//     font-family: "Icon Font";
-//     content: $glyph;
-//   }
-// }
 
 
 button {
-	width: 15px;
-	height: 15px;
+	width: rem(15);
+	height: rem(15);
 	border-radius: 50%;
 	border: none;
 	
 	
 	&.quit {
 		background: $btn-quit;
-		border: 1px solid darken($btn-quit, 10%);
+		border: rem(1) solid darken($btn-quit, 10%);
 		
 		&:hover,
 		&.active {
@@ -73,7 +62,7 @@ button {
 	
 	&.minimize {
 		background: $btn-minimize;
-		border: 1px solid darken($btn-minimize, 10%);
+		border: rem(1) solid darken($btn-minimize, 10%);
 
 		&:hover,
 		&.active {
@@ -82,7 +71,7 @@ button {
 	}
 	&.maximize {
 		background: $btn-maximize;
-		border: 1px solid darken($btn-maximize, 10%);
+		border: rem(1) solid darken($btn-maximize, 10%);
 
 		&:hover,
 		&.active {

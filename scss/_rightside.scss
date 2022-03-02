@@ -1,20 +1,20 @@
 .right-side {
     background: $color-right-side;
     width: 60%;
-    padding: 10px;
+    padding: rem(10);
 
     .controls {
         display: flex;
         justify-content: flex-end;
-        padding: 7px 10px;
+        padding: rem(7) rem(10);
 
         color: $color-font3;
 
         a.add-task {
-            font-size: 24px;
-            padding: 0 2px;
+            font-size: rem(24);
+            padding: 0 rem(2);
             line-height: 0.8;
-            border-radius: 5px;
+            border-radius: rem(5);
 
             &:hover {
                 background: transparentize($color-font3, 0.8);
@@ -24,7 +24,7 @@
     }
 
     .todos {
-        padding: 8px;
+        padding: rem(8);
 
         .header {
             display: flex;
@@ -33,11 +33,11 @@
             color: $color-social;
 
             h1 {
-                margin: 10px 0 15px;
+                margin: rem(10) 0 rem(15);
             }
             
             span.count {
-                font-size: 32px;
+                font-size: rem(32);
                 // font-weight: 500;
             };
         }
@@ -46,17 +46,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid lighten($color-font3, 10%);
-            padding-bottom: 2px;
-            margin-right: -13px;
+            border-bottom: rem(1) solid lighten($color-font3, 10%);
+            padding-bottom: rem(2);
+            margin-right: rem(-13);
             ;
-            font-size: 14px;
+            font-size: rem(14);
 
             a {
                 color: $color-social;
-                margin-right: 9px;
-                padding: 5px;
-                border-radius: 3px;
+                margin-right: rem(9);
+                padding: rem(5);
+                border-radius: rem(3);
 
                 &:hover {
                     background: transparentize($color-font3, 0.8);
@@ -67,24 +67,24 @@
 
         .task {
             display: flex;
-            margin-top: 5px;
+            margin-top: rem(5);
             
             .task-detail {
                 flex-grow: 1;
                 
-                padding: 3px 0;
-                border-bottom: 1px solid lighten($color-font3, 10%);
-                margin-left: 10px;
-                margin-right: -13px;
+                padding: rem(3) 0;
+                border-bottom: rem(1) solid lighten($color-font3, 10%);
+                margin-left: rem(10);
+                margin-right: rem(-13);
 
                 h4 {
-                    font-size: 14px;
+                    font-size: rem(14);
                 }
                 p {
-                    font-size: 12px;
+                    font-size: rem(12);
                     color: $color-font2;
-                    margin-top: 3px;
-                    margin-bottom: 5px;
+                    margin-top: rem(3);
+                    margin-bottom: rem(5);
                 }
             }
         }

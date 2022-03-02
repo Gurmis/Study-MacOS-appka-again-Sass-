@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 @import 'leftside';
 @import 'rightside';
 @import 'buttons';
@@ -41,15 +42,15 @@ body {
 .container {
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 15px;
-	padding-right: 15px;
-	max-width: 1150px;
-	min-width: 320px;
+	padding-left: rem(15);
+	padding-right: rem(15);
+	max-width: rem(1150);
+	min-width: rem(320);
 }
 
 .app {
-	height: 600px;
-	width: 750px;
+	height: rem(600);
+	width: rem(750);
 	
 	display: inline-block;
 	border-radius: 0.5rem;
